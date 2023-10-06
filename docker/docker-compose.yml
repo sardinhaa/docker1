@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  os:
+    container_name: paloleto
+    build: .
+    tty: true
+
