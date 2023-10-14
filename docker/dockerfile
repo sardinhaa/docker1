@@ -3,18 +3,20 @@ FROM ubuntu:latest
 RUN useradd -m user1 -s /bin/bash && \
     useradd -m user2 -s /bin/bash
 
-RUN mkdir /home/user1/usr1 && \
-    mkdir /home/user2/usr2 && \
-    echo "user1" >> /home/user1/usr1/texto.txt && \
-    echo "user2" >> /home/user2/usr2/texto.txt
+RUN mkdir /share && \
+    mkdir /share/usr1 && \
+    mkdir /share/usr2 && \
+    echo "user1" >> /share/usr1/texto.txt && \
+    echo "user2" >> /share/usr2/texto.txt
 
 RUN groupadd wkspace && \
     usermod -aG wkspace user1 && \
     usermod -aG wkspace user2
     
-RUN chown user1:wkspace /home/user1 && \
-    chmod 770  /home/user1 && \
-    chown user2:wkspace /home/user2 && \
-    chmod 770  /home/user2 
+RUN chown user1:wkspace /share/usr1 && \
+    chmod 770  /share/usr1 && \
+    chown user2:wkspace /share/usr2 && \
+    chmod 770  /share/usr2 
+
     
 CMD ["bash"]
