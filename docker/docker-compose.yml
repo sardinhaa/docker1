@@ -2,7 +2,7 @@ version: '3'
 
 services:
   os:
-    container_name: paloleto
+    container_name: teste
     build: .
     tty: true
 
