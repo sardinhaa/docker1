@@ -10,5 +10,6 @@ tty terminal interativo
 && -para fazer o proximo codigo sabendo que o anterior foi realizado
 \ -e a quebra de linha e vai apra a linha a baixo
 
-cmd bash - 
+cmd bash - executa o codigo em bash
+
 
